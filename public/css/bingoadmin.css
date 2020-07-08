@@ -1,0 +1,129 @@
+
+* {
+    box-sizing: border-box;
+  }
+  html,body{
+    margin: 0;
+    padding: 0;
+}
+body {
+    font-family: open_sans,Helvetica,Arial,sans-serif;
+    background-image: url('../images/bbg.png');
+    font-size: 1em;
+    line-height: 1.2;
+    color: #333;
+    position: relative;
+  
+}
+.n1,.n2,.n3{
+  position: relative;
+  display: block;
+    font-family: open_sans,Helvetica,Arial,sans-serif;
+    font-size: 1em;
+    font-weight: 800;
+    margin: auto;
+    width: 350px;
+    height:50px;
+    background-color: #e7f5c5;
+    padding: 10px;
+    text-align: center;
+    border-radius: 10px;
+    margin-top: 50px;
+   
+  
+  
+}
+.n1:before {
+  content: "Første række";
+  position: relative;
+  display: block;
+  margin-top: -30px;
+height: 35px;
+  color: #40550e
+}
+.n2:before {
+  content: "Anden række";
+  position: relative;
+  display: block;
+  margin-top: -30px;
+  height: 35px;
+  color: #40550e
+}
+.n3:before {
+  content: "Pladen fuld";
+  position: relative;
+  display: block;
+  margin-top: -30px;
+  height: 35px;
+  color: #40550e
+}
+  .formdiv{
+      position: relative;
+      display: block;
+     margin-top: 50px;;   
+  }
+  form.example input[type=text] {
+    padding: 10px;
+    font-size: 17px;
+    border: 1px solid #80a91c;
+    float: left;
+    width: 80%;
+    background: #f1f1f1;
+  }
+  
+  form.example button {
+    float: left;
+    border-radius: 0px 10px 10px 0px;
+    width: 20%;
+    padding: 10px;
+    background: #A0D323;
+    color: white;
+    font-size: 17px;
+    border: 1px solid #80a91c;
+    border-left: none;
+    cursor: pointer;
+  }
+  
+  form.example button:hover {
+    background: #e7f5c5;
+  }
+  input[type=submit]:focus{
+    outline: none;
+  }
+  *:focus {
+    outline: none;
+  }
+  form.example::after {
+    content: "";
+    clear: both;
+    display: table;
+  }
+
+  .imgwrap{
+    width: 50%;
+    position: relative;
+    display: block;
+    padding-top: 150px;
+    padding-bottom: 150px;;
+    left: 50%;
+    transform: translateX(-50%);
+    overflow: auto;
+    height: auto;
+    
+}
+
+.imgwrap>img{
+    width: 50%;
+    margin-left: auto;
+    margin-right: auto;
+    display: block;
+    
+    box-shadow: .4rem .4rem .8rem 0 rgba(0,0,0,.30);
+  }
+  
+  /* Clearfix (clear floats) */
+  .imgwrap::after {
+    content: "";
+    clear: both;
+    display: table;
+  }

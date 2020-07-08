@@ -1,0 +1,11 @@
+{
+  "name": "bp",
+  "version": "1.0.0",
+  "description": "biggo ticket generator",
+  "main": "index.js",
+  "author": "krilleandersen@gmail.com",
+  "license": "ISC",
+  "dependencies": {
+    "fabric": "^3.6.3"
+  }
+}

@@ -1,0 +1,295 @@
+*, ::after, ::before {
+    box-sizing: border-box;
+}
+html,body{
+    margin: 0;
+    padding: 0;
+}
+body {
+    font-family: open_sans,Helvetica,Arial,sans-serif;
+    font-size: 1em;
+    line-height: 1.2;
+    color: #333;
+    position: relative;
+    background-image: url('../images/bbg.png');
+}
+
+.corporate-nav {
+    display: block;
+    position: relative;
+    background-color: #607f15;
+    height: 40px;
+    width:100vw;
+}
+
+.brand-nav {
+    display: block;
+    background-color: #a0d323;
+    box-shadow: .2rem .2rem .8rem 0 rgba(0,0,0,.15);
+    position: relative;
+overflow: visible;
+padding-left: 20px;
+padding-right: 12px;
+height: 75px;
+    width:100vw;
+}
+
+.imgwrap{
+    display:block;
+    max-width: 1150px;
+    position: absolute;
+    top: 120px;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    margin: auto;
+}
+
+.imgwrap>img {
+    display: inline-block;
+    position: relative; 
+    margin-right: 4px;
+    margin-bottom: -2px;
+    box-shadow: .4rem .4rem .8rem 0 rgba(0,0,0,.20);
+}
+
+.selectprint{
+    display: flex;
+    justify-content:center;
+    width: 100%;
+    height: 75px;
+
+    
+}
+#myForm{
+    display: inline-block;
+    position: relative;
+    height: 75px;  
+    width: 450px;
+}
+select {
+    display: inline-block;
+    position: relative;
+    margin: 10px;
+    width: 150px;
+    padding: 5px 35px 5px 5px;
+    font-size: 16px;
+    border: none;
+    border-radius: .4rem;
+    height: 34px;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+  }
+  
+  label[for=plader]{
+      display: inline-block;
+      position: relative;
+      height: 75px;
+      margin: 10px;
+      margin-top: 15px;
+  }
+  /* CAUTION: Internet Explorer hackery ahead */
+  
+  
+  select::-ms-expand {
+      display: none; /* Remove default arrow in Internet Explorer 10 and 11 */
+  }
+  
+  /* Target Internet Explorer 9 to undo the custom arrow */
+  @media screen and (min-width:0\0) {
+      select {
+          background: none\9;
+          padding: 5px\9;
+      }
+  }
+.printbtn{
+    display: inline-block;
+    position: relative;
+    border-radius: .4rem;
+    font-size: 0.7em;
+    font-weight: 800;
+    background-color: #607f15;
+    color: #ffffff;
+    border: none;
+    width: 120px;
+    height: 34px;
+     padding: 5px 5px 5px 5px;
+    text-decoration: none;
+margin-top: 10px;
+    cursor: pointer;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    text-align: center;
+
+}
+input[type=submit] {
+    display: inline-block;
+    position: relative;
+    border-radius: .4rem;
+    font-size: 0.7em;
+    font-weight: 800;
+    background-color: #feb700;
+    border: none;
+    width: 100px;
+    height: 34px;
+     padding: 5px 5px 5px 5px;
+    text-decoration: none;
+    margin: 10px;
+    cursor: pointer;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    text-align: center;
+  }
+  button:hover {
+    background: #e7f5c5;
+    color:#607f15;
+  }
+  input[type=submit]:hover {
+    background: #e7f5c5;
+    color:#607f15;
+  }
+  input[type=submit]:focus{
+    outline: none;
+  }
+  *:focus {
+    outline: none;
+  }
+
+
+
+
+  @media (max-width: 1144px) {
+    .imgwrap{
+        display:block;
+        width: 568px;
+        position: absolute;
+        top: 120px;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        margin: auto;
+        background-color: blueviolet;
+      
+    }
+  }
+
+  @media (max-width: 606px) {
+    .imgwrap{
+        width: 100%;
+      
+    }
+    .corporate-nav {
+        display: block;
+        position: relative;
+        display: block;
+        background-color: #607f15;
+        height: 40px;
+        width:100vw;
+    }
+    
+    .brand-nav {
+        display: block;
+        background-color: #a0d323;
+        box-shadow: .2rem .2rem .8rem 0 rgba(0,0,0,.15);
+        position: relative;
+    overflow: visible;
+    padding-left: 5px;
+    padding-right: 5px;
+    height: 75px;
+        width:100vw;
+    }
+
+    .imgwrap>img {
+        width: 100%;
+        display: inline-block;
+        position: relative; 
+    margin-right: 4px;
+    margin-bottom: -2px;
+    }
+
+    .selectprint{
+        display: flex;
+        justify-content:center;
+        width: 100%;
+        height: 75px;
+    
+        
+    }
+    #myForm{
+        display: inline-block;
+        position: relative;
+        height: 75px;  
+        width: 450px;
+    }
+    label[for=plader]{
+        font-size: 0.8em;
+        margin: 0;
+    }
+    select {
+        width: 50px;
+        font-size: 0.8em;
+    }
+    input[type=submit] {
+        font-size: 0.6em;
+        width: 80px;
+        margin: 0;
+    }
+    .printbtn{
+        font-size: 0.6em;
+        width: 100px;
+        margin: 0;
+        margin-top: 10px;
+    }
+  }
+  /*print black'n'white*/
+@media print {
+    *{
+        margin: 0;
+        padding: 0;
+    }
+    body {
+      /* IE4-8 and 9 (deprecated). */
+      filter: Gray();
+      /* SVG version for IE10, Chrome 17, FF3.5, 
+         Safari 5.2 and Opera 11.6 */
+      filter: url('#grayscale'); 
+      /* CSS3 filter, at the moment Webkit only. Prefix it for
+         future implementations */
+      -webkit-filter: grayscale(100%); 
+      filter: grayscale(100%); /* future-proof */
+      margin: 0;
+      padding: 0;
+    }
+    .corporate-nav {
+        display: none
+    }
+    .brand-nav{
+        display: none;
+    }
+    .selectprint{
+        display: none;
+    }
+    #myForm{
+        display: none;
+    }
+    .imgwrap{
+        position: absolute;
+        top: 0;
+        column-count: 1;
+        width: 17cm;
+        overflow: visible;
+        background-color: #607f15;
+    }
+    .imgwrap>img {
+        
+        display: block;
+        position: relative; 
+        margin-bottom: 4px;
+  /*  margin-right: 4px;
+    margin-bottom: -2px;*/
+    box-shadow: .0rem .0rem .0rem 0 rgba(0,0,0,.0);
+    }
+  }

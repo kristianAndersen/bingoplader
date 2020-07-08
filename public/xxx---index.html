@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+     <link rel="stylesheet" type="text/css" href="css/main.css">
+    <title>bingo plader</title>
+</head>
+<body>
+<div class="corporate-nav "></div>
+<div class="brand-nav">
+<div class="selectprint">    
+   
+<form id="myForm">
+    
+<label for="plader">Vælg antal plader:</label>
+
+<select id="plader" name="plader">
+    <option value="1">1</option>
+    <option value="4">4</option>
+  <option value="6">6</option>
+  <option value="8">8</option>
+  <option value="10">10</option>
+  <option value="12">12</option>
+  <option value="14">14</option>
+  <option value="16">16</option>
+  <option value="18">18</option>
+  <option value="20">20</option>
+  <option value="24">24</option>
+  <option value="28">28</option>
+</select>
+<input type="submit" value="hent plader">
+</form>
+<button class="printbtn" onclick="window.print()">Print dine plader</button>
+</div>
+
+</div>
+<div class="imgwrap">
+
+</div>
+
+<script>
+
+window.addEventListener('afterprint', (e) => {
+  console.log('After print');
+  e.preventDefault();
+});
+
+thenum = document.querySelector('.thenum');
+imgwrap= document.querySelector('.imgwrap');
+var form = document.getElementById( "myForm" );
+
+        form.addEventListener("submit", function (e) {
+              console.log(e.submitter.type)
+              var select = document.getElementById('plader');
+              var agent_id = select.options[select.selectedIndex].value;
+
+      
+                
+
+       
+            var number = {
+             value: agent_id
+             }
+           
+             e.preventDefault();
+       
+
+            var xhr = new window.XMLHttpRequest()
+            xhr.onreadystatechange = function () {
+                if (this.readyState == 4 && this.status == 200) {
+                   
+                    imgwrap.innerHTML=" ";
+                    
+                    var result = xhr.responseText;
+
+                    var imgJSON = JSON.parse(result);
+                    
+                    
+                    for(i=0; i<imgJSON.data.length; i++){
+                      
+                    var datatype='data:image/png;base64,';
+                    let imagedate=`<img src="${datatype+imgJSON.data[i]}" >`
+                  
+                    imgwrap.innerHTML += imagedate;
+                    }
+                    
+                }
+              
+              
+            };
+                xhr.open('POST', '/api/tickets', true)
+                xhr.setRequestHeader('Content-Type', 'application/json;charset=UTF-8')
+                xhr.send(JSON.stringify(number))
+            
+            
+            });
+
+
+
+     
+</script>
+</body>
+
+
+
+</html>

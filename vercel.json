@@ -1,0 +1,13 @@
+{
+    "version": 2,
+    "functions": {
+      "api/tickets.js": {
+        "memory": 1024,
+        "maxDuration": 10
+      }
+    },
+    "routes": [
+        { "src": "/api/tickets", "dest": "/api/tickets.js" },
+        { "src": "/api/bpadmin", "dest": "/api/bpadmin.js" }
+      ]
+  }
